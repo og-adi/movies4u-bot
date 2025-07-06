@@ -1,7 +1,7 @@
 # MOVIES4U BOT
 [![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/og-adi/movies4u-bot)
 
-This is a command-line utility built with Python to automate the process of finding and extracting download links for movies and TV shows from `movies4u.gold`.
+This is a command-line utility built with Python to automate the process of finding and extracting download links for movies and TV shows from `movies4u.mov`.
 
 ## Features
 - Search for content by name.
@@ -49,8 +49,8 @@ This is a command-line utility built with Python to automate the process of find
     ```
     2 Results found !
 
-    1. Interstellar (2014) Full Movie [English DD5.1] 1080p 10bit HEVC BluRay ... - https://www.movies4u.gold/interstellar-2014-full-movie/
-    2. Interstellar (2014) Dual Audio [Hindi+English] BluRay ... - https://www.movies4u.gold/interstellar-2014-dual-audio-hindienglish/
+    1. Interstellar (2014) Full Movie [English DD5.1] 1080p 10bit HEVC BluRay ... - https://www.movies4u.mov/interstellar-2014-full-movie/
+    2. Interstellar (2014) Dual Audio [Hindi+English] BluRay ... - https://www.movies4u.mov/interstellar-2014-dual-audio-hindienglish/
 
     Enter no. of choice: 1
     ```
@@ -59,9 +59,9 @@ This is a command-line utility built with Python to automate the process of find
 
 ## How It Works
 
-1.  **Search:** The script takes a user query, constructs a search URL for `movies4u.gold`, and scrapes the results page using `requests` and `BeautifulSoup`.
+1.  **Search:** The script takes a user query, constructs a search URL for `movies4u.mov`, and scrapes the results page using `requests` and `BeautifulSoup`.
 2.  **Selection:** It displays the titles and links of the found content, allowing the user to select the correct one.
-3.  **Link Extraction:** The script visits the selected movie's page and parses it to find the initial download link, which typically points to a `linkz.wiki` page.
+3.  **Link Extraction:** The script visits the selected movie's page and parses it to find the initial download link, which typically points to a `linkz.wiki` or `linkz.mom` page.
 4.  **Bypass:** To access the final links, the script launches a browser instance using `SeleniumBase` with undetected-chromedriver (`uc=True`). this allows it to bypass JavaScript challenges and bot detection mechanisms.
 5.  **Final Output:** Once on the final page, the script parses the HTML one last time to extract and print all available download links, which are often grouped by video quality.
 
