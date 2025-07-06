@@ -4,7 +4,7 @@ from seleniumbase import SB
 
 def url_generator(query):
     query = query.replace(' ','+')
-    query_url = f'https://www.movies4u.gold/?s={query}'
+    query_url = f'https://www.movies4u.mov/?s={query}'
     resp = requests.get(query_url)
     soup = BeautifulSoup(resp.content,'html.parser')
     posts = soup.find('div',class_='container d-flex flex-wrap')
@@ -37,9 +37,8 @@ def url_finder(html):
     a_ele = btns.find_all('a')
     for a_tag in a_ele:
         link = a_tag.get('href')
-        if 'linkz.wiki' in link:
+        if 'linkz.wiki' or 'linkz.mom' in link:
             return link
-            break
         else:
             return None
 
